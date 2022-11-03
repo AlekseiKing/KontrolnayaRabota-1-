@@ -14,7 +14,19 @@ string[] FillArray()
     return _array;
 }
 
-
+bool[] FindInText(string[] _array)
+{
+    bool[] arrayFlag = new bool[_array.Length];
+    for (int i = 0; i < _array.Length; i++)
+    {
+        if (_array[i].Length <= 3)
+        {
+            arrayFlag[i] = true;
+        }
+        else arrayFlag[i] = false;
+    }
+    return arrayFlag;
+}
 
 void PrintArray(string[] _array)
 {
