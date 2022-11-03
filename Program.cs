@@ -1,4 +1,6 @@
 ﻿
+string[] array = FillArray();
+PrintArray(ArrayFormation(array, FindInText(array)));
 
 string[] FillArray()
 {
