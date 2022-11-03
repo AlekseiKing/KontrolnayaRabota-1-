@@ -28,6 +28,23 @@ bool[] FindInText(string[] _array)
     return arrayFlag;
 }
 
+string[] ArrayFormation(string[] _array, bool[] _arrayFlag)
+{
+    int newArraySize = 0;
+    foreach (var item in _arrayFlag)
+        if (item) newArraySize++;
+    string[] newArray = new string[newArraySize];
+    for (int i = 0, j = 0; i < _array.Length; i++)
+    {
+        if (_arrayFlag[i])
+        {
+            newArray[j] = _array[i];
+            j++;
+        }
+    }
+    return newArray;
+}
+
 void PrintArray(string[] _array)
 {
     foreach (var item in _array)
